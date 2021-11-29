@@ -9,10 +9,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/styles/variables";
-h1 {
-  color: $primary-color;
-  font-size: 30px;
-  padding: 16px;
-}
+@import "@/styles/error";
 </style>
