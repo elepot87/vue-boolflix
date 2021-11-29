@@ -19,28 +19,32 @@ export default {
   data() {
     return {
       filmList: null,
+      searchTextInput: "",
     };
   },
   created() {
-    this.getFilmList();
+    // this.getFilmList();
   },
   methods: {
+    searchFilm(text) {
+      console.log(text);
+      this.searchTextInput = text;
+    },
     getFilmList() {
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
             api_key: "694d4228c101f485c77573eb27c4523a",
-            query: "Fantozzi",
+            query: this.searchTextInput,
+            language: "it-IT",
           },
         })
         .then((response) => {
           console.log(response.data.results);
           this.filmList = response.data.results;
+          // console.log(this.filmList);
         })
         .catch((err) => console.log(err));
-    },
-    searchFilm(text) {
-      console.log(text);
     },
   },
 };
