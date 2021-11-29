@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Header @performeSearch="searchFilm" />
-    <Main :films="filmList" />
+    <Main :films="filmList" v-if="noEmptyInput" />
+    <Error v-else />
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import axios from "axios";
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
+import Error from "@/components/Error.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
+    Error,
   },
   data() {
     return {
@@ -25,15 +28,17 @@ export default {
   created() {
     // this.getFilmList();
   },
+
   methods: {
     searchFilm(text) {
       console.log(text);
       this.searchTextInput = text;
-      if (this.searchTextInput !== "") {
-        this.getFilmList(this.searchTextInput);
-      } else {
-        alert("Inserisci un titolo nel campo di ricerca");
-      }
+      this.getFilmList(this.searchTextInput);
+      // if (this.searchTextInput !== "") {
+      //   this.getFilmList(this.searchTextInput);
+      // } else {
+      //   alert("Inserisci un titolo nel campo di ricerca");
+      // }
     },
     getFilmList(query) {
       axios
@@ -47,9 +52,13 @@ export default {
         .then((response) => {
           console.log(response.data.results);
           this.filmList = response.data.results;
-          // console.log(this.filmList);
         })
         .catch((err) => console.log(err));
+    },
+  },
+  computed: {
+    noEmptyInput() {
+      return this.searchTextInput !== "";
     },
   },
 };

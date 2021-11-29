@@ -12,7 +12,7 @@
           :info2="film.vote_average"
         />
       </li>
-      <div class="no-result">La ricerca non ha prodotto risultati</div>
+      <div class="no-result" v-else>La ricerca non ha prodotto risultati</div>
     </ul>
   </main>
 </template>
