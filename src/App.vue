@@ -29,7 +29,11 @@ export default {
     searchFilm(text) {
       console.log(text);
       this.searchTextInput = text;
-      this.getFilmList(this.searchTextInput);
+      if (this.searchTextInput !== "") {
+        this.getFilmList(this.searchTextInput);
+      } else {
+        alert("Inserisci un titolo nel campo di ricerca");
+      }
     },
     getFilmList(query) {
       axios
