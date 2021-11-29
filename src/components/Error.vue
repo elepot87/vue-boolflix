@@ -1,5 +1,5 @@
 <template>
-  <h1>Inserisci un titolo nell'input</h1>
+  <h1>Inserisci un titolo per iniziare la ricerca!</h1>
 </template>
 
 <script>
@@ -9,8 +9,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/styles/variables";
 h1 {
-  color: red;
+  color: $primary-color;
   font-size: 30px;
+  padding: 16px;
 }
 </style>
