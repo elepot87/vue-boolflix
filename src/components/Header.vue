@@ -6,6 +6,7 @@
         class="form-control"
         placeholder=">Search film"
         v-model.trim="searchText"
+        @keyup="$emit('performeSearch', searchText)"
       />
       <button
         type="submit"
