@@ -6,5 +6,11 @@
   .film-item {
     margin-bottom: 20px;
     font-size: 18px;
+    .title,
+    .title-original,
+    .language,
+    .ratings {
+      margin-bottom: 5px;
+    }
   }
 }
