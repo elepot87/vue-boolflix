@@ -2,7 +2,12 @@
   .title,
   .title-original,
   .language,
+  .flag-lang,
   .ratings {
     margin-bottom: 5px;
+  }
+  .flag-lang {
+    width: 20px;
+    height: auto;
   }
 }
