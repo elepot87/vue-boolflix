@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @performeSearch="searchFilm" />
     <Main :films="filmList" />
   </div>
 </template>
@@ -35,6 +35,9 @@ export default {
           this.filmList = response.data.results;
         })
         .catch((err) => console.log(err));
+    },
+    searchFilm() {
+      console.log("emit evento padre");
     },
   },
 };
