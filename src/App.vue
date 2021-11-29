@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @performeSearch="searchFilm" />
-    <Main :films="filmList" v />
+    <Main :films="filmList" />
   </div>
 </template>
 

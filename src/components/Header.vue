@@ -14,6 +14,7 @@
       >
         Search
       </button>
+      <button type="reset" @click.prevent="clearSearchInput">Reset</button>
     </form>
   </header>
 </template>
@@ -25,6 +26,14 @@ export default {
     return {
       searchText: "",
     };
+  },
+  methods: {
+    clearSearchInput() {
+      // reset dato
+      this.searchText = "";
+      // emit
+      this.$emit("performeSearch", this.searchText);
+    },
   },
 };
 </script>
