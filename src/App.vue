@@ -29,13 +29,14 @@ export default {
     searchFilm(text) {
       console.log(text);
       this.searchTextInput = text;
+      this.getFilmList(this.searchTextInput);
     },
-    getFilmList() {
+    getFilmList(query) {
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
             api_key: "694d4228c101f485c77573eb27c4523a",
-            query: this.searchTextInput,
+            query: query,
             language: "it-IT",
           },
         })
