@@ -27,17 +27,20 @@ export default {
   methods: {
     getFilmList() {
       axios
-        .get(
-          "https://api.themoviedb.org/3/search/movie/?api_key=694d4228c101f485c77573eb27c4523a&query=Fantozzi&language=it-IT"
-        )
+        .get("https://api.themoviedb.org/3/search/movie", {
+          params: {
+            api_key: "694d4228c101f485c77573eb27c4523a",
+            query: "Fantozzi",
+          },
+        })
         .then((response) => {
           console.log(response.data.results);
           this.filmList = response.data.results;
         })
         .catch((err) => console.log(err));
     },
-    searchFilm() {
-      console.log("emit evento padre");
+    searchFilm(text) {
+      console.log(text);
     },
   },
 };
