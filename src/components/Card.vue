@@ -1,6 +1,14 @@
 <template>
   <div class="container-card">
-    <img :src="`https://image.tmdb.org/t/p/w185/${poster}`" alt="" />
+    <div class="container-poster">
+      <img
+        v-if="posterOk"
+        :src="`https://image.tmdb.org/t/p/w185/${poster}`"
+        alt=""
+      />
+      <div class="alternative-img" v-else>Immagine non disponibile</div>
+    </div>
+
     <h4 class="title">{{ title }}</h4>
     <h5 class="title-original">{{ subtitle }}</h5>
     <div class="language">
@@ -34,6 +42,9 @@ export default {
   computed: {
     flag() {
       return this.flags.includes(this.info1);
+    },
+    posterOk() {
+      return this.poster !== undefined && this.poster !== null;
     },
   },
 };
