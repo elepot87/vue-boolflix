@@ -44,34 +44,44 @@ export default {
       // }
     },
     getFilmList(query) {
-      axios
-        .get("https://api.themoviedb.org/3/search/movie", {
-          params: {
-            api_key: "694d4228c101f485c77573eb27c4523a",
-            query: query,
-            language: "it-IT",
-          },
-        })
-        .then((response) => {
-          console.log(response.data.results);
-          this.filmList = response.data.results;
-        })
-        .catch((err) => console.log(err));
+      if (query === "") {
+        console.log("vuoto");
+        this.filmList = null;
+      } else {
+        axios
+          .get("https://api.themoviedb.org/3/search/movie", {
+            params: {
+              api_key: "694d4228c101f485c77573eb27c4523a",
+              query: query,
+              language: "it-IT",
+            },
+          })
+          .then((response) => {
+            console.log(response.data.results);
+            this.filmList = response.data.results;
+          })
+          .catch((err) => console.log(err));
+      }
     },
     getSeriesList(query) {
-      axios
-        .get("https://api.themoviedb.org/3/search/tv", {
-          params: {
-            api_key: "694d4228c101f485c77573eb27c4523a",
-            query: query,
-            language: "it-IT",
-          },
-        })
-        .then((response) => {
-          console.log(response.data.results);
-          this.seriesList = response.data.results;
-        })
-        .catch((err) => console.log(err));
+      if (query === "") {
+        console.log("vuoto");
+        this.seriesList = null;
+      } else {
+        axios
+          .get("https://api.themoviedb.org/3/search/tv", {
+            params: {
+              api_key: "694d4228c101f485c77573eb27c4523a",
+              query: query,
+              language: "it-IT",
+            },
+          })
+          .then((response) => {
+            console.log(response.data.results);
+            this.seriesList = response.data.results;
+          })
+          .catch((err) => console.log(err));
+      }
     },
   },
   computed: {
