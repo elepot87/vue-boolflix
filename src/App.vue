@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @performeSearch="searchFilm" />
-    <Main :films="filmList" v-if="noEmptyInput" />
+    <Main :films="filmList" :series="seriesList" v-if="noEmptyInput" />
     <Error v-else />
   </div>
 </template>
