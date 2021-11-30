@@ -21,8 +21,8 @@ export default {
   },
   data() {
     return {
-      filmList: null,
-      seriesList: null,
+      filmList: [],
+      seriesList: [],
       searchTextInput: "",
     };
   },
