@@ -38,7 +38,7 @@ export default {
     },
     getFilmList(query) {
       if (query === "") {
-        this.filmList = null;
+        this.filmList = [];
       } else {
         axios
           .get("https://api.themoviedb.org/3/search/movie", {
@@ -57,7 +57,7 @@ export default {
     },
     getSeriesList(query) {
       if (query === "") {
-        this.seriesList = null;
+        this.seriesList = [];
       } else {
         axios
           .get("https://api.themoviedb.org/3/search/tv", {
