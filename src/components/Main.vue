@@ -16,6 +16,7 @@
           class="series-item"
           v-for="(serie, index) in series"
           :key="`series-${index}`"
+          :poster="serie.poster_path"
           :title="serie.name"
           :subtitle="serie.original_name"
           :info1="serie.original_language"
