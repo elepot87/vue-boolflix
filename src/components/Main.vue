@@ -1,7 +1,7 @@
 <template>
   <main class="main-container">
     <ul class="container-film">
-      <li v-if="films.length > 0">
+      <li v-if="films.length > 0 || series.length > 0">
         <Card
           class="film-item"
           v-for="(film, index) in films"
