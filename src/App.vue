@@ -22,18 +22,21 @@ export default {
   data() {
     return {
       filmList: null,
+      seriesList: null,
       searchTextInput: "",
     };
   },
-  created() {
-    // this.getFilmList();
-  },
+  // created() {
+  //   this.getSeriesList();
+  // },
 
   methods: {
     searchFilm(text) {
       console.log(text);
       this.searchTextInput = text;
       this.getFilmList(this.searchTextInput);
+      this.getSeriesList(this.searchTextInput);
+
       // if (this.searchTextInput !== "") {
       //   this.getFilmList(this.searchTextInput);
       // } else {
@@ -52,6 +55,21 @@ export default {
         .then((response) => {
           console.log(response.data.results);
           this.filmList = response.data.results;
+        })
+        .catch((err) => console.log(err));
+    },
+    getSeriesList(query) {
+      axios
+        .get("https://api.themoviedb.org/3/search/tv", {
+          params: {
+            api_key: "694d4228c101f485c77573eb27c4523a",
+            query: query,
+            language: "it-IT",
+          },
+        })
+        .then((response) => {
+          console.log(response.data.results);
+          this.seriesList = response.data.results;
         })
         .catch((err) => console.log(err));
     },

@@ -6,7 +6,7 @@
       <img
         v-if="flag"
         :src="require(`@/assets/img/${info1}.png`)"
-        alt=""
+        alt="info1"
         class="flag-lang"
       />
       <div class="language" v-else>Lingua: {{ info1 }}</div>
