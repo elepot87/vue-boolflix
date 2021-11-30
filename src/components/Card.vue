@@ -1,5 +1,6 @@
 <template>
   <div class="container-card">
+    <img :src="`https://image.tmdb.org/t/p/w185/${poster}`" alt="" />
     <h4 class="title">{{ title }}</h4>
     <h5 class="title-original">{{ subtitle }}</h5>
     <div class="language">
@@ -19,6 +20,7 @@
 export default {
   name: "Card",
   props: {
+    poster: String,
     title: String,
     subtitle: String,
     info1: String,

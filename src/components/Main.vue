@@ -6,6 +6,7 @@
           class="film-item"
           v-for="(film, index) in films"
           :key="`film-${index}`"
+          :poster="film.poster_path"
           :title="film.title"
           :subtitle="film.original_title"
           :info1="film.original_language"

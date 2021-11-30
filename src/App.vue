@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header @performeSearch="searchFilm" />
+    <Header @performeSearch="searchList" />
     <Main :films="filmList" :series="seriesList" v-if="noEmptyInput" />
     <Error v-else />
   </div>
@@ -31,21 +31,13 @@ export default {
   // },
 
   methods: {
-    searchFilm(text) {
-      console.log(text);
+    searchList(text) {
       this.searchTextInput = text;
       this.getFilmList(this.searchTextInput);
       this.getSeriesList(this.searchTextInput);
-
-      // if (this.searchTextInput !== "") {
-      //   this.getFilmList(this.searchTextInput);
-      // } else {
-      //   alert("Inserisci un titolo nel campo di ricerca");
-      // }
     },
     getFilmList(query) {
       if (query === "") {
-        console.log("vuoto");
         this.filmList = null;
       } else {
         axios
@@ -65,7 +57,6 @@ export default {
     },
     getSeriesList(query) {
       if (query === "") {
-        console.log("vuoto");
         this.seriesList = null;
       } else {
         axios
