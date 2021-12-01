@@ -28,6 +28,7 @@
       ></i>
       <i class="far fa-star" v-for="n in 5 - getVoteStars(info2)" :key="n"> </i>
     </div>
+    <div class="overview">{{ text }}</div>
   </div>
 </template>
 
@@ -40,6 +41,7 @@ export default {
     subtitle: String,
     info1: String,
     info2: Number,
+    text: String,
   },
   data() {
     return {

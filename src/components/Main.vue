@@ -11,6 +11,7 @@
           :subtitle="film.original_title"
           :info1="film.original_language"
           :info2="film.vote_average"
+          :text="film.overview"
         />
         <Card
           class="series-item"
@@ -21,6 +22,7 @@
           :subtitle="serie.original_name"
           :info1="serie.original_language"
           :info2="serie.vote_average"
+          :text="serie.overview"
         />
       </li>
       <div class="no-result" v-else>La ricerca non ha prodotto risultati</div>
