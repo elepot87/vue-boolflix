@@ -1,12 +1,14 @@
 .main-container {
-  padding: 16px;
+  padding: 16;
+  flex-grow: 1;
+  overflow: auto;
+
   .container-list {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-
   .film-item,
   .series-item {
     margin-bottom: 20px;

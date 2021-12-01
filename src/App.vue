@@ -3,6 +3,7 @@
     <Header @performeSearch="searchList" />
     <Main :films="filmList" :series="seriesList" v-if="noEmptyInput" />
     <Error v-else />
+    <Footer />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import axios from "axios";
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
 import Error from "@/components/Error.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
@@ -18,6 +20,7 @@ export default {
     Header,
     Main,
     Error,
+    Footer,
   },
   data() {
     return {
