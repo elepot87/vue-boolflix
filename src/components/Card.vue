@@ -7,7 +7,10 @@
         alt=""
         class="poster"
       />
-      <div class="alternative-img" v-else>Immagine non disponibile</div>
+      <div class="alternative-img" v-else>
+        <i class="fas fa-file-image icon-img"></i>
+        <div class="text-alternative-img">Immagine non disponibile</div>
+      </div>
     </div>
     <div class="container-info">
       <h4 class="title">{{ title }}</h4>

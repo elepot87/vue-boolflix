@@ -3,6 +3,7 @@
 
 .container-card {
   position: relative;
+
   .container-poster {
     width: 100%;
     height: 100%;
@@ -11,6 +12,24 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+    }
+    .alternative-img {
+      background-color: $secondary-color;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      .icon-img {
+        color: $primary-color;
+        font-size: 70px;
+        margin-bottom: 20px;
+      }
+      .text-alternative-img {
+        color: $third-color;
+        font-family: $font-primary;
+      }
     }
   }
 
@@ -53,15 +72,6 @@
     //   width: 20px;
     //   height: auto;
     // }
-
-    .alternative-img {
-      background-color: #ccc;
-      width: 185px;
-      height: 279px;
-      display: flex;
-      text-align: center;
-      align-items: center;
-    }
 
     .icon-star {
       color: $primary-color;
