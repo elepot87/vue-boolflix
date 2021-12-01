@@ -1,10 +1,12 @@
 <template>
-  <h1>Inserisci un titolo per iniziare la ricerca!</h1>
+  <div class="container-warning">
+    <h1>Inserisci un titolo per iniziare la ricerca</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Error",
+  name: "Warning",
 };
 </script>
 

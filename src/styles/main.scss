@@ -23,4 +23,15 @@
       }
     }
   }
+  .no-result {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    .text-no-result {
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: $title;
+      align-self: center;
+    }
+  }
 }

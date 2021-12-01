@@ -37,7 +37,7 @@
         <input
           type="text"
           class="form-control"
-          placeholder=">Search film or tv series"
+          placeholder="Search film or tv series"
           v-model.trim="searchText"
           @keyup="$emit('performeSearch', searchText)"
         />

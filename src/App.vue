@@ -2,7 +2,7 @@
   <div id="app">
     <Header @performeSearch="searchList" />
     <Main :films="filmList" :series="seriesList" v-if="noEmptyInput" />
-    <Error v-else />
+    <Warning v-else />
     <Footer />
   </div>
 </template>
@@ -11,7 +11,7 @@
 import axios from "axios";
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
-import Error from "@/components/Error.vue";
+import Warning from "@/components/Warning.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -19,7 +19,7 @@ export default {
   components: {
     Header,
     Main,
-    Error,
+    Warning,
     Footer,
   },
   data() {

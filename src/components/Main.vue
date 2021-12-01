@@ -14,7 +14,11 @@
       </li>
       <li v-for="(serie, index) in series" :key="`series-${index}`"></li>
     </ul>
-    <div class="no-result" v-else>La ricerca non ha prodotto risultati</div>
+    <div class="no-result d-flex" v-else>
+      <div class="text-no-result d-flex">
+        Spiacenti, la ricerca non ha prodotto risultati!
+      </div>
+    </div>
   </main>
 </template>
 

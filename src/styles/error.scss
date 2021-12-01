@@ -1,8 +1,14 @@
 // Import file variabili
 @import "@/styles/variables";
 
+.container-warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   color: $primary-color;
-  font-size: 30px;
-  padding: 16px;
+  font-family: $font-primary;
+  font-size: $warning;
 }
