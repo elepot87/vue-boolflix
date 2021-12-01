@@ -2,7 +2,10 @@
   <main class="main-container">
     <div class="container-list" v-if="films.length > 0 || series.length > 0">
       <!-- Contenitore film -->
-      <h1 class="title-container">Film</h1>
+      <div class="title-container">
+        <i class="fas fa-film icon-title"></i>
+        <span class="title-text">Film</span>
+      </div>
       <div class="container-film">
         <div
           class="list-item"
@@ -21,7 +24,10 @@
         </div>
       </div>
       <!-- Contenitore serie tv -->
-      <h1 class="title-container">Serie tv</h1>
+      <div class="title-container">
+        <i class="fas fa-tv icon-title"></i>
+        <span class="title-text">Serie Tv</span>
+      </div>
       <div class="container-series">
         <div
           class="list-item"

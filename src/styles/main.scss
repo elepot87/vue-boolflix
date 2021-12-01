@@ -9,8 +9,16 @@
   .container-list {
     .title-container {
       color: $primary-color;
-      font-family: $font-primary;
       margin-bottom: 20px;
+      .icon-title {
+        font-size: $icon-title;
+        margin-right: 15px;
+      }
+      .title-text {
+        font-size: $icon-title;
+        font-family: $font-primary;
+        font-weight: $semibold;
+      }
     }
   }
 
@@ -18,7 +26,7 @@
   .container-series {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 10px 0;
 
