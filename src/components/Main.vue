@@ -1,11 +1,9 @@
 <template>
   <main class="main-container">
-    <ul class="container-film">
-      <li v-if="films.length > 0 || series.length > 0">
+    <ul class="container-list" v-if="films.length > 0 || series.length > 0">
+      <li v-for="(film, index) in films" :key="`film-${index}`">
         <Card
           class="film-item"
-          v-for="(film, index) in films"
-          :key="`film-${index}`"
           :poster="film.poster_path"
           :title="film.title"
           :subtitle="film.original_title"
@@ -13,20 +11,10 @@
           :info2="film.vote_average"
           :text="film.overview"
         />
-        <Card
-          class="series-item"
-          v-for="(serie, index) in series"
-          :key="`series-${index}`"
-          :poster="serie.poster_path"
-          :title="serie.name"
-          :subtitle="serie.original_name"
-          :info1="serie.original_language"
-          :info2="serie.vote_average"
-          :text="serie.overview"
-        />
       </li>
-      <div class="no-result" v-else>La ricerca non ha prodotto risultati</div>
+      <li v-for="(serie, index) in series" :key="`series-${index}`"></li>
     </ul>
+    <div class="no-result" v-else>La ricerca non ha prodotto risultati</div>
   </main>
 </template>
 
