@@ -21,8 +21,12 @@
       <div class="language" v-else>Lingua: {{ info1 }}</div>
     </div>
     <div class="ratings">
-      <i class="fas fa-star" v-for="n in (5, getVoteStars(info2))" :key="n">
-      </i>
+      <i
+        class="fas fa-star"
+        v-for="n in getVoteStars(info2)"
+        :key="`stars-${n}`"
+      ></i>
+      <i class="far fa-star" v-for="n in 5 - getVoteStars(info2)" :key="n"> </i>
     </div>
   </div>
 </template>
