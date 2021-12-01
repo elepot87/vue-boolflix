@@ -1,30 +1,46 @@
 <template>
   <main class="main-container">
-    <ul class="container-list" v-if="films.length > 0 || series.length > 0">
-      <li v-for="(film, index) in films" :key="`film-${index}`">
-        <Card
-          class="film-item"
-          :poster="film.poster_path"
-          :title="film.title"
-          :subtitle="film.original_title"
-          :info1="film.original_language"
-          :info2="film.vote_average"
-          :text="film.overview"
-        />
-      </li>
+    <div class="container-list" v-if="films.length > 0 || series.length > 0">
+      <!-- Contenitore film -->
+      <h1 class="title-container">Film</h1>
+      <div class="container-film">
+        <div
+          class="list-item"
+          v-for="(film, index) in films"
+          :key="`film-${index}`"
+        >
+          <Card
+            class="film-item"
+            :poster="film.poster_path"
+            :title="film.title"
+            :subtitle="film.original_title"
+            :info1="film.original_language"
+            :info2="film.vote_average"
+            :text="film.overview"
+          />
+        </div>
+      </div>
+      <!-- Contenitore serie tv -->
+      <h1 class="title-container">Serie tv</h1>
+      <div class="container-series">
+        <div
+          class="list-item"
+          v-for="(serie, index) in series"
+          :key="`series-${index}`"
+        >
+          <Card
+            class="film-item"
+            :poster="serie.poster_path"
+            :title="serie.name"
+            :subtitle="serie.original_name"
+            :info1="serie.original_language"
+            :info2="serie.vote_average"
+            :text="serie.overview"
+          />
+        </div>
+      </div>
+    </div>
 
-      <li v-for="(serie, index) in series" :key="`series-${index}`">
-        <Card
-          class="film-item"
-          :poster="serie.poster_path"
-          :title="serie.name"
-          :subtitle="serie.original_name"
-          :info1="serie.original_language"
-          :info2="serie.vote_average"
-          :text="serie.overview"
-        />
-      </li>
-    </ul>
     <div class="no-result d-flex" v-else>
       <div class="text-no-result d-flex">
         Spiacenti, la ricerca non ha prodotto risultati!

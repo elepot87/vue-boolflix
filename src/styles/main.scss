@@ -6,14 +6,23 @@
   flex-grow: 1;
   overflow: auto;
   background-color: $fourth-color;
-
   .container-list {
+    .title-container {
+      color: $primary-color;
+      font-family: $font-primary;
+      margin-bottom: 20px;
+    }
+  }
+
+  .container-film,
+  .container-series {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 10px 0;
 
-    li {
+    .list-item {
       margin: 0 20px 20px 0;
       width: calc(100% / 7 - 20px);
       text-align: center;
