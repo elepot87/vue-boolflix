@@ -5,7 +5,7 @@
   padding: 50px 30px;
   flex-grow: 1;
   overflow: auto;
-  color: $secondary-color;
+  background-color: $fourth-color;
 
   .container-list {
     list-style: none;
@@ -18,8 +18,7 @@
       text-align: center;
       .film-item,
       .series-item {
-        font-size: 16px;
-        color: $third-color;
+        height: 100%;
       }
     }
   }

@@ -23,11 +23,15 @@
       </div>
       <div class="ratings">
         <i
-          class="fas fa-star"
+          class="fas fa-star icon-star"
           v-for="n in getVoteStars(info2)"
           :key="`stars-${n}`"
         ></i>
-        <i class="far fa-star" v-for="n in 5 - getVoteStars(info2)" :key="n">
+        <i
+          class="far fa-star icon-star"
+          v-for="n in 5 - getVoteStars(info2)"
+          :key="n"
+        >
         </i>
       </div>
       <div class="overview">{{ text }}</div>
