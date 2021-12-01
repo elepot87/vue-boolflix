@@ -41,4 +41,18 @@
       }
     }
   }
+  // Copytight
+  .copyright {
+    color: $footer;
+    .icon-copyright {
+      color: $primary-color;
+    }
+    a {
+      text-decoration: none;
+      color: currentColor;
+    }
+    a:hover {
+      color: $primary-color;
+    }
+  }
 }
