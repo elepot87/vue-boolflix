@@ -20,7 +20,9 @@
       />
       <div class="language" v-else>Lingua: {{ info1 }}</div>
     </div>
-    <div class="ratings">{{ info2 }}</div>
+    <div class="ratings">
+      <i class="fas fa-star">{{ info2 }}</i>
+    </div>
   </div>
 </template>
 
@@ -45,6 +47,11 @@ export default {
     },
     posterOk() {
       return this.poster !== undefined && this.poster !== null;
+    },
+  },
+  methods: {
+    getVoteStars(number) {
+      return Math.ceil(number / 2);
     },
   },
 };
