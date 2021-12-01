@@ -21,7 +21,8 @@
       <div class="language" v-else>Lingua: {{ info1 }}</div>
     </div>
     <div class="ratings">
-      <i class="fas fa-star">{{ info2 }}</i>
+      <i class="fas fa-star" v-for="n in (5, getVoteStars(info2))" :key="n">
+      </i>
     </div>
   </div>
 </template>
