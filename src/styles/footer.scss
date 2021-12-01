@@ -3,16 +3,14 @@
 
 .footer {
   background: #000;
-
   width: 100%;
   display: flex;
   flex-direction: column;
   // align-items: center;
-  padding: 30px 16px;
+  padding: 30px;
   // Parte alta footer
   .footer-high {
     margin-bottom: 30px;
-    padding: 0 300px;
     a {
       color: $primary-color;
     }
@@ -24,13 +22,12 @@
   // Parte bassa footer
   .footer-low {
     color: $third-color;
-    padding: 0 300px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     .menu-footer {
       list-style: none;
       li {
-        margin-bottom: 25px;
+        margin-bottom: 10px;
         .link-footer {
           text-decoration: none;
           color: $footer;
@@ -44,12 +41,14 @@
   // Copytight
   .copyright {
     color: $footer;
+    margin-top: 20px;
     .icon-copyright {
       color: $primary-color;
     }
     a {
       text-decoration: none;
       color: currentColor;
+      font-style: italic;
     }
     a:hover {
       color: $primary-color;

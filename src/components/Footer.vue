@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="copyright">
-      Made with so much <i class="fas fa-heart icon-copyright"></i> by
+      Made with big <i class="fas fa-heart icon-copyright"></i> by
       <a href="https://github.com/elepot87" target="_blank">Eleonora</a>
     </div>
   </footer>
