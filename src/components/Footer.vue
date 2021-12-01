@@ -1,25 +1,28 @@
 <template>
   <footer class="footer">
-    <div class="footer-high">
-      <a
-        href="https://www.facebook.com/verdepastelloadvsolutions/"
-        target="_blank"
-      >
-        <i class="fab fa-facebook-f icon-footer"></i>
-      </a>
-      <a href="https://www.instagram.com/verdepastello_to/" target="_blank">
-        <i class="fab fa-instagram icon-footer"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/company/verdepastello/ "
-        target="_blank"
-      >
-        <i class="fab fa-linkedin-in icon-footer"></i>
-      </a>
-    </div>
-    <div class="footer-low d-flex">
+    <div class="footer-top d-flex">
       <div class="first">
         <ul class="menu-footer">
+          <li>
+            <a
+              href="https://www.facebook.com/verdepastelloadvsolutions/"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f icon-footer"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/verdepastello_to/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram icon-footer"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/verdepastello/ "
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in icon-footer"></i>
+            </a>
+          </li>
           <li><a href="#" class="link-footer">Audio e sottotitoli</a></li>
           <li><a href="#" class="link-footer">Media Center</a></li>
           <li><a href="#" class="link-footer">Privacy</a></li>
