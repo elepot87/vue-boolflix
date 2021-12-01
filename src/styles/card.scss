@@ -60,12 +60,16 @@
 
     .title {
       color: $primary-color;
+      font-family: $font-primary;
+      font-size: $title;
     }
 
     .title-original {
       color: $third-color;
+      font-family: $font-primary;
       font-style: italic;
       margin: 10px 0 20px 0;
+      font-size: $subtitle;
     }
 
     // .flag-lang {
