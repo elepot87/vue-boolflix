@@ -36,19 +36,23 @@
       <form action="">
         <input
           type="text"
-          class="form-control"
+          class="form-control input-site"
           placeholder="Search film or tv series"
           v-model.trim="searchText"
           @keyup="$emit('performeSearch', searchText)"
         />
         <button
-          class="btn"
+          class="button-site"
           type="submit"
           @click.prevent="$emit('performeSearch', searchText)"
         >
           Search
         </button>
-        <button class="btn" type="reset" @click.prevent="clearSearchInput">
+        <button
+          class="button-site"
+          type="reset"
+          @click.prevent="clearSearchInput"
+        >
           Reset
         </button>
       </form>

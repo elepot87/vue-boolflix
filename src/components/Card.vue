@@ -8,6 +8,10 @@
         class="poster"
       />
       <div class="alternative-img" v-else>
+        <!-- <img
+          :src="require(`@/assets/img/no_image.jpg`)"
+          alt="placeholder image"
+        /> -->
         <i class="fas fa-file-image icon-img"></i>
         <div class="text-alternative-img">Immagine non disponibile</div>
       </div>
