@@ -12,7 +12,18 @@
           :text="film.overview"
         />
       </li>
-      <li v-for="(serie, index) in series" :key="`series-${index}`"></li>
+
+      <li v-for="(serie, index) in series" :key="`series-${index}`">
+        <Card
+          class="film-item"
+          :poster="serie.poster_path"
+          :title="serie.name"
+          :subtitle="serie.original_name"
+          :info1="serie.original_language"
+          :info2="serie.vote_average"
+          :text="serie.overview"
+        />
+      </li>
     </ul>
     <div class="no-result d-flex" v-else>
       <div class="text-no-result d-flex">
