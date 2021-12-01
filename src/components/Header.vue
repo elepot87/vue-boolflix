@@ -1,5 +1,11 @@
 <template>
-  <header class="header">
+  <header class="header d-flex">
+    <a href="#">
+      <img
+        src="require(@/assets/img/logo-verdepastello.png)"
+        alt="logo Verdepastello"
+      />
+    </a>
     <form action="">
       <input
         type="text"

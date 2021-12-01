@@ -1,8 +1,8 @@
+// Import file variabili
+@import "@/styles/variables";
+
 .header {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  background-color: purple;
+  background-color: $primary-color;
   width: 100%;
   padding: 16px;
   button {

@@ -1,7 +1,11 @@
+// Import file variabili
+@import "@/styles/variables";
+
 .main-container {
   padding: 16;
   flex-grow: 1;
   overflow: auto;
+  color: $third-color;
 
   .container-list {
     list-style: none;
