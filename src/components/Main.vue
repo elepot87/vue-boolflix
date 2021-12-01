@@ -2,7 +2,7 @@
   <main class="main-container">
     <div class="container-list" v-if="films.length > 0 || series.length > 0">
       <!-- Contenitore film -->
-      <div class="title-container">
+      <div class="title-container" v-if="films.length > 0">
         <i class="fas fa-film icon-title"></i>
         <span class="title-text">Film</span>
       </div>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <!-- Contenitore serie tv -->
-      <div class="title-container">
+      <div class="title-container" v-if="series.length > 0">
         <i class="fas fa-tv icon-title"></i>
         <span class="title-text">Serie Tv</span>
       </div>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-
+    <!-- No risultati -->
     <div class="no-result d-flex" v-else>
       <div class="text-no-result d-flex">
         Spiacenti, la ricerca non ha prodotto risultati!
