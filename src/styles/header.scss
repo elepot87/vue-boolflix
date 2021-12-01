@@ -5,11 +5,56 @@
   background-color: $primary-color;
   width: 100%;
   padding: 16px;
-  button {
-    margin: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  // /Header Left
+  .header-left {
+    width: 20%;
+    align-items: center;
+
+    .brand-link {
+      .logo-header {
+        width: 80px;
+        margin-right: 20px;
+      }
+    }
+    .name-app {
+      font-family: $font-primary;
+      font-weight: $bold;
+      font-size: $headerBig;
+    }
   }
-  input {
-    width: 250px;
-    height: 20px;
+  // Header center
+  .header-center {
+    width: 50%;
+    justify-content: center;
+    font-family: $font-primary;
+    .main-menu {
+      list-style: none;
+      .menu-item {
+        margin-right: 15px;
+        .link-menu {
+          text-decoration: none;
+          color: $secondary-color;
+          font-family: $font-primary;
+          font-size: 18px;
+        }
+        .link-menu:hover {
+          color: $third-color;
+        }
+      }
+    }
+  }
+  // Header right
+  .header-right {
+    width: 30%;
+    text-align: right;
+    button {
+      margin: 0 10px;
+    }
+    input {
+      width: 250px;
+      height: 20px;
+    }
   }
 }

@@ -1,27 +1,51 @@
 <template>
   <header class="header d-flex">
-    <a href="#">
-      <img
-        src="require(@/assets/img/logo-verdepastello.png)"
-        alt="logo Verdepastello"
-      />
-    </a>
-    <form action="">
-      <input
-        type="text"
-        class="form-control"
-        placeholder=">Search film or tv series"
-        v-model.trim="searchText"
-        @keyup="$emit('performeSearch', searchText)"
-      />
-      <button
-        type="submit"
-        @click.prevent="$emit('performeSearch', searchText)"
-      >
-        Search
-      </button>
-      <button type="reset" @click.prevent="clearSearchInput">Reset</button>
-    </form>
+    <div class="header-left d-flex">
+      <a href="#" class="brand-link">
+        <img
+          :src="require(`@/assets/img/logo_verdepastello.png`)"
+          alt="logo
+      Verdepastello"
+          class="logo-header"
+        />
+      </a>
+      <div class="name-app">PastelloFlix Streaming</div>
+    </div>
+    <!-- Header center -->
+    <nav class="header-center">
+      <ul class="main-menu d-flex">
+        <li class="menu-item"><a href="#" class="link-menu">Serie Tv</a></li>
+        <li class="menu-item"><a href="#" class="link-menu">Film</a></li>
+        <li class="menu-item">
+          <a href="#" class="link-menu">Nuovi e popolari</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="link-menu">La mia lista</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="link-menu">Guarda di nuovo</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Header right -->
+    <div class="header-right">
+      <form action="">
+        <input
+          type="text"
+          class="form-control"
+          placeholder=">Search film or tv series"
+          v-model.trim="searchText"
+          @keyup="$emit('performeSearch', searchText)"
+        />
+        <button
+          type="submit"
+          @click.prevent="$emit('performeSearch', searchText)"
+        >
+          Search
+        </button>
+        <button type="reset" @click.prevent="clearSearchInput">Reset</button>
+      </form>
+    </div>
   </header>
 </template>
 
