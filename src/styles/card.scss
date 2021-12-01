@@ -57,7 +57,9 @@
     display: none;
 
     .language {
-      display: none;
+      margin-bottom: 10px;
+      color: $third-color;
+      font-size: $card;
     }
 
     .title {
@@ -74,10 +76,11 @@
       font-size: $subtitle;
     }
 
-    // .flag-lang {
-    //   width: 20px;
-    //   height: auto;
-    // }
+    .flag-lang {
+      width: 20px;
+      height: auto;
+      margin-left: 5px;
+    }
 
     .icon-star {
       color: $primary-color;

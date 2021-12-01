@@ -16,6 +16,7 @@
       <h4 class="title">{{ title }}</h4>
       <h5 class="title-original">{{ subtitle }}</h5>
       <div class="language">
+        <span>Lingua:</span>
         <img
           v-if="flag"
           :src="require(`@/assets/img/${info1}.png`)"
