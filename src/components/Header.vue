@@ -28,7 +28,11 @@
       </ul>
     </nav>
     <!-- Header right -->
-    <div class="header-right">
+    <div class="header-right d-flex">
+      <div class="info-user">
+        <i class="fas fa-bell icon-header"></i>
+        <i class="fas fa-user icon-header"></i>
+      </div>
       <form action="">
         <input
           type="text"
@@ -38,12 +42,15 @@
           @keyup="$emit('performeSearch', searchText)"
         />
         <button
+          class="btn"
           type="submit"
           @click.prevent="$emit('performeSearch', searchText)"
         >
           Search
         </button>
-        <button type="reset" @click.prevent="clearSearchInput">Reset</button>
+        <button class="btn" type="reset" @click.prevent="clearSearchInput">
+          Reset
+        </button>
       </form>
     </div>
   </header>
