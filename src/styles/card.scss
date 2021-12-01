@@ -1,21 +1,37 @@
 .container-card {
-  .title,
-  .title-original,
-  .language,
-  .flag-lang,
-  .ratings {
-    margin-bottom: 5px;
+  position: relative;
+  .container-poster {
+    width: 100%;
+    height: 100%;
+    .poster {
+      width: 100%;
+    }
   }
-  .flag-lang {
-    width: 20px;
-    height: auto;
-  }
-  .alternative-img {
-    background-color: #ccc;
-    width: 185px;
-    height: 279px;
-    display: flex;
-    text-align: center;
-    align-items: center;
+  .container-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%;
+    .title,
+    .title-original,
+    .language,
+    .flag-lang,
+    .ratings {
+      margin-bottom: 5px;
+    }
+    .flag-lang {
+      width: 20px;
+      height: auto;
+    }
+    .alternative-img {
+      background-color: #ccc;
+      width: 185px;
+      height: 279px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
   }
 }
