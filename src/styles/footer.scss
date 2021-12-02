@@ -62,3 +62,38 @@
     }
   }
 }
+
+// MEDIA QUERY
+/* Schermi da 576px a 767px */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .footer .footer-top {
+    .first {
+      .menu-footer {
+        li.social-footer {
+          display: none;
+        }
+      }
+    }
+    .second,
+    .third,
+    .fourth {
+      margin-top: 0px !important;
+    }
+    .first,
+    .second,
+    .third,
+    .fourth {
+      .menu-footer {
+        li {
+          margin-bottom: 10px;
+          a {
+            font-size: $menu-mobile;
+          }
+        }
+      }
+    }
+  }
+  .footer .copyright {
+    font-size: $menu-mobile;
+  }
+}

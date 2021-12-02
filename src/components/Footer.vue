@@ -3,7 +3,7 @@
     <div class="footer-top d-flex">
       <div class="first">
         <ul class="menu-footer">
-          <li>
+          <li class="social-footer">
             <a
               href="https://www.facebook.com/verdepastelloadvsolutions/"
               target="_blank"
