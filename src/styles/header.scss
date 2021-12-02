@@ -210,7 +210,6 @@
       width: 50%;
       justify-content: center;
       display: flex;
-      font-family: $font-primary;
       .main-menu {
         display: none;
       }
@@ -249,3 +248,60 @@
     }
   }
 }
+/* Schermi da 768px a 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  // HEADER
+  .header {
+    padding: 10px;
+    // Header left
+    .header-left {
+      flex-direction: row;
+      width: 30%;
+      .brand-link {
+        .logo-header {
+          width: 70px;
+          margin: 0;
+          margin-right: 20px;
+        }
+      }
+      .logo-pastelloflix {
+        width: 100px;
+      }
+    }
+    // Header center
+    .header-center {
+      width: 20%;
+      justify-content: center;
+      display: flex;
+      .main-menu {
+        display: none;
+      }
+    }
+    // Header right
+    .header-right {
+      width: 50%;
+      #input-site {
+        width: 200px;
+        height: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        margin-left: 0;
+        font-size: $menu-mobile;
+      }
+      .button-site {
+        margin: 3px 0;
+        height: 25px;
+        width: 70px;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .header .header-right .dropdown #dropdownMenuButton {
+    display: none;
+    .icon-header {
+      display: none;
+    }
+  }
+} ;
