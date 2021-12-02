@@ -25,12 +25,12 @@
       width: 200px;
     }
 
-    .name-app {
-      font-family: $font-primary;
-      font-weight: $bold;
-      font-size: $headerBig;
-      color: $secondary-color;
-    }
+    // .name-app {
+    //   font-family: $font-primary;
+    //   font-weight: $bold;
+    //   font-size: $headerBig;
+    //   color: $secondary-color;
+    // }
   }
 
   // Header center
@@ -42,6 +42,9 @@
       list-style: none;
       display: flex;
       margin: 0;
+      .menu-toggle-mobile {
+        display: none;
+      }
       .menu-item {
         margin-right: 15px;
         .link-menu {
@@ -180,4 +183,69 @@
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+}
+
+// MEDIA QUERY
+/* Schermi da 576px a 767px */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .header {
+    padding: 10px;
+
+    // Header left
+    .header-left {
+      flex-direction: column;
+      width: 20%;
+      .brand-link {
+        .logo-header {
+          width: 50px;
+          margin: 0;
+        }
+      }
+      .logo-pastelloflix {
+        width: 80px;
+      }
+    }
+    // Header center
+    .header-center {
+      width: 50%;
+      justify-content: center;
+      display: flex;
+      font-family: $font-primary;
+      .main-menu {
+        display: none;
+      }
+      .menu-toggle-mobile {
+        display: block;
+        color: $secondary-color;
+        font-size: $headerBig;
+        cursor: pointer;
+      }
+    }
+    // Header right
+    .header-right {
+      width: 40%;
+      #input-site {
+        width: 200px;
+        height: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        margin-left: 0;
+        font-size: $menu-mobile;
+      }
+      .button-site {
+        margin: 3px 0;
+        height: 20px;
+        width: 50px;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .header .header-right .dropdown #dropdownMenuButton {
+    display: none;
+    .icon-header {
+      display: none;
+    }
+  }
 }

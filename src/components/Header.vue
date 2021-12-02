@@ -20,6 +20,7 @@
     </div>
     <!-- Header center -->
     <nav class="header-center">
+      <i class="fas fa-bars menu-toggle-mobile"></i>
       <ul class="main-menu">
         <li class="menu-item"><a href="#" class="link-menu">Serie Tv</a></li>
         <li class="menu-item"><a href="#" class="link-menu">Film</a></li>
