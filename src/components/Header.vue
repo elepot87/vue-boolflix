@@ -88,7 +88,11 @@
         >
           <i class="fas fa-user icon-header"></i>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div
+          class="dropdown-menu"
+          aria-labelledby="dropdownMenuButton"
+          id="custom-menu"
+        >
           <a class="dropdown-item" href="#">Account</a>
           <a class="dropdown-item" href="#">Pagamenti</a>
           <a class="dropdown-item" href="#">Guarda ancora</a>
