@@ -67,3 +67,14 @@
     }
   }
 }
+/* Schermi da 768px a 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main-container {
+    .container-film,
+    .container-series {
+      .list-item {
+        width: calc(100% / 3 - 20px);
+      }
+    }
+  }
+}
