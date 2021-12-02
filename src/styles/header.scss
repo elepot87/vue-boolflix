@@ -38,13 +38,14 @@
     width: 50%;
     justify-content: center;
     font-family: $font-primary;
+    .menu-toggle-mobile {
+      display: none;
+    }
     .main-menu {
       list-style: none;
       display: flex;
       margin: 0;
-      .menu-toggle-mobile {
-        display: none;
-      }
+
       .menu-item {
         margin-right: 15px;
         .link-menu {
@@ -443,6 +444,91 @@
       width: 30px;
       height: 30px;
       line-height: 30px;
+    }
+  }
+}
+
+/* Schermi da 1400px in su */
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+  .header {
+    padding: 15px;
+    // Header left
+    .header-left {
+      flex-direction: row;
+      width: 18%;
+      .brand-link {
+        .logo-header {
+          width: 80px;
+          margin-right: 15px;
+        }
+      }
+      .logo-pastelloflix {
+        width: 150px;
+      }
+    }
+    // Header center
+    .header-center {
+      width: 35%;
+      justify-content: center;
+      display: flex;
+      .menu-toggle-mobile {
+        display: none;
+      }
+      .main-menu {
+        display: block;
+        display: flex;
+        padding: 0;
+        .menu-item {
+          margin-right: 10px;
+          .link-menu {
+            font-size: $menu;
+          }
+        }
+      }
+    }
+    // Header right
+    .header-right {
+      width: 47%;
+      #input-site {
+        width: 250px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        color: $secondary-color;
+        margin-right: 10px;
+        margin-left: 10px;
+        outline: none;
+        font-family: $font-secondary;
+      }
+
+      #input-site:focus {
+        border: 1px solid $secondary-color;
+      }
+
+      .button-site {
+        margin: 0 10px;
+        height: 30px;
+        width: 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: $secondary-color;
+        color: $primary-color;
+        margin-right: 5px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+  .header .header-right .dropdown #dropdownMenuButton {
+    display: block;
+    .icon-header {
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
     }
   }
 }
