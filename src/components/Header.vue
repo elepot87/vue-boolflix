@@ -1,6 +1,6 @@
 <template>
-  <header class="header d-flex">
-    <div class="header-left d-flex">
+  <header class="header">
+    <div class="header-left">
       <a href="#" class="brand-link">
         <img
           :src="require(`@/assets/img/logo_verdepastello.png`)"
@@ -9,11 +9,18 @@
           class="logo-header"
         />
       </a>
-      <div class="name-app">PastelloFlix Streaming</div>
+      <a href="https://fontmeme.com/netflix-font/" target="_blank"
+        ><img
+          src="https://fontmeme.com/permalink/211202/07bdeb0a689bad366cebdb92ed30424b.png"
+          alt="netflix-font"
+          border="0"
+          class="logo-pastelloflix"
+      /></a>
+      <!-- <div class="name-app">PastelloFlix Streaming</div> -->
     </div>
     <!-- Header center -->
     <nav class="header-center">
-      <ul class="main-menu d-flex">
+      <ul class="main-menu">
         <li class="menu-item"><a href="#" class="link-menu">Serie Tv</a></li>
         <li class="menu-item"><a href="#" class="link-menu">Film</a></li>
         <li class="menu-item">
@@ -28,7 +35,7 @@
       </ul>
     </nav>
     <!-- Header right -->
-    <div class="header-right d-flex">
+    <div class="header-right">
       <!-- <div class="info-user d-flex">
         <div class="dropdown-custom" @click="menuActive()">
           <i class="fas fa-bell icon-header"></i>
