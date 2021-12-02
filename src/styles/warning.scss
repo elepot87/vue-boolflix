@@ -12,3 +12,11 @@ h1 {
   font-family: $font-primary;
   font-size: $warning;
 }
+
+// MEDIA QUERY
+/* Schermi da 576px a 767px */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  h1 {
+    font-size: $warning-mobile;
+  }
+}
