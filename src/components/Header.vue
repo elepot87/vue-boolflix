@@ -29,26 +29,63 @@
     </nav>
     <!-- Header right -->
     <div class="header-right d-flex">
-      <div class="info-user d-flex">
-        <div class="dropdown" @click="menuActive()">
+      <!-- <div class="info-user d-flex">
+        <div class="dropdown-custom" @click="menuActive()">
           <i class="fas fa-bell icon-header"></i>
-          <ul class="menu-dropdown" :class="{ active: isActive }">
+          <ul class="menu-dropdown-custom" :class="{ active: isActive }">
             <li class="item-dropdown">È uscito Dominion</li>
             <li><span class="divider"></span></li>
             <li class="item-dropdown">Le novità!</li>
           </ul>
         </div>
-        <div class="dropdown user" @click="menuActive()">
+      
+        <div class="dropdown-custom user" @click="menuActive()">
           <i class="fas fa-user icon-header"></i>
-          <ul class="menu-dropdown" :class="{ active: isActive }">
+          <ul class="menu-dropdown-custom">
             <li class="item-dropdown">Account</li>
             <li><span class="divider"></span></li>
             <li class="item-dropdown">Pagamenti</li>
             <li><span class="divider"></span></li>
-            <li class="item-dropdown">Ordini</li>
+            <li class="item-dropdown">Guarda ancora</li>
             <li><span class="divider"></span></li>
             <li class="item-dropdown">I tuoi preferiti</li>
           </ul>
+        </div>
+      </div> -->
+      <!-- Bootstrap Dropdown-->
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bell icon-header"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">È uscito Dominion</a>
+          <a class="dropdown-item" href="#">Le novità!</a>
+          <a class="dropdown-item" href="#">Trailer</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fas fa-user icon-header"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Account</a>
+          <a class="dropdown-item" href="#">Pagamenti</a>
+          <a class="dropdown-item" href="#">Guarda ancora</a>
+          <a class="dropdown-item" href="#">I tuoi preferiti</a>
         </div>
       </div>
       <form action="">
@@ -95,9 +132,9 @@ export default {
       // emit
       this.$emit("performeSearch", this.searchText);
     },
-    menuActive() {
-      this.isActive = !this.isActive;
-    },
+    // menuActive() {
+    //   this.isActive = !this.isActive;
+    // },
   },
 };
 </script>
