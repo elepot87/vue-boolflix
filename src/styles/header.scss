@@ -67,9 +67,41 @@
         line-height: 40px;
         text-align: center;
       }
+      .dropdown {
+        position: relative;
+        .menu-dropdown {
+          list-style: none;
+          background-color: $secondary-color;
+          width: 150px;
+          position: absolute;
+          top: 39px;
+          left: 21px;
+          padding: 0 10px;
+          margin: 0;
+          display: none;
+          .item-dropdown {
+            color: $third-color;
+            margin-bottom: 20px;
+            font-family: $font-primary;
+            font-size: $subtitle;
+          }
+          .item-dropdown:first-child {
+            margin-top: 20px;
+          }
+          .divider {
+            display: block;
+            height: 1px;
+            background: #aaaaaa;
+            margin: 20px 0;
+          }
+        }
+        .menu-dropdown.active {
+          display: block;
+        }
+      }
     }
 
-    .input-site {
+    #input-site {
       width: 250px;
       height: 30px;
       padding: 10px;
@@ -78,9 +110,10 @@
       color: $secondary-color;
       margin-right: 10px;
       outline: none;
+      font-family: $font-secondary;
     }
 
-    .input-site:focus {
+    #input-site:focus {
       border: 1px solid $secondary-color;
     }
 

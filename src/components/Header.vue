@@ -29,14 +29,33 @@
     </nav>
     <!-- Header right -->
     <div class="header-right d-flex">
-      <div class="info-user">
-        <i class="fas fa-bell icon-header"></i>
-        <i class="fas fa-user icon-header"></i>
+      <div class="info-user d-flex">
+        <div class="dropdown" @click="menuActive()">
+          <i class="fas fa-bell icon-header"></i>
+          <ul class="menu-dropdown" :class="{ active: isActive }">
+            <li class="item-dropdown">È uscito Dominion</li>
+            <li><span class="divider"></span></li>
+            <li class="item-dropdown">Le novità!</li>
+          </ul>
+        </div>
+        <div class="dropdown user" @click="menuActive()">
+          <i class="fas fa-user icon-header"></i>
+          <ul class="menu-dropdown" :class="{ active: isActive }">
+            <li class="item-dropdown">Account</li>
+            <li><span class="divider"></span></li>
+            <li class="item-dropdown">Pagamenti</li>
+            <li><span class="divider"></span></li>
+            <li class="item-dropdown">Ordini</li>
+            <li><span class="divider"></span></li>
+            <li class="item-dropdown">I tuoi preferiti</li>
+          </ul>
+        </div>
       </div>
       <form action="">
         <input
           type="text"
-          class="form-control input-site"
+          id="input-site"
+          class="form-control-site"
           placeholder="Search film or tv series"
           v-model.trim="searchText"
           @keyup="$emit('performeSearch', searchText)"
@@ -66,6 +85,7 @@ export default {
   data() {
     return {
       searchText: "",
+      isActive: false,
     };
   },
   methods: {
@@ -74,6 +94,9 @@ export default {
       this.searchText = "";
       // emit
       this.$emit("performeSearch", this.searchText);
+    },
+    menuActive() {
+      this.isActive = !this.isActive;
     },
   },
 };
