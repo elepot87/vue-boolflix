@@ -51,7 +51,7 @@
           text-decoration: none;
           color: $secondary-color;
           font-family: $font-primary;
-          font-size: 18px;
+          font-size: $menu;
         }
         .link-menu:hover {
           color: $third-color;
@@ -347,6 +347,76 @@
     // Header right
     .header-right {
       width: 45%;
+      #input-site {
+        width: 280px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        margin-left: 20px;
+        font-size: $menu-mobile;
+      }
+      .button-site {
+        margin: 3px 0;
+        height: 25px;
+        width: 70px;
+        font-size: 12px;
+        margin: 10px 5px 0 20px;
+      }
+    }
+  }
+  .header .header-right .dropdown #dropdownMenuButton {
+    display: block;
+    .icon-header {
+      display: block;
+      font-size: 16px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+/* Schermi da 1200px a 1399px */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .header {
+    padding: 15px;
+    // Header left
+    .header-left {
+      flex-direction: row;
+      width: 20%;
+      .brand-link {
+        .logo-header {
+          width: 80px;
+          margin-right: 15px;
+        }
+      }
+      .logo-pastelloflix {
+        width: 125px;
+      }
+    }
+    // Header center
+    .header-center {
+      width: 45%;
+      justify-content: center;
+      display: flex;
+      .menu-toggle-mobile {
+        display: none;
+      }
+      .main-menu {
+        display: block;
+        display: flex;
+        .menu-item {
+          margin-right: 10px;
+          .link-menu {
+            font-size: $menu;
+          }
+        }
+      }
+    }
+    // Header right
+    .header-right {
+      width: 35%;
       #input-site {
         width: 280px;
         height: 30px;
