@@ -42,8 +42,11 @@
       }
     }
   }
-
-  // Copytight
+  // Social Tablet
+  .container-social-tablet {
+    display: none;
+  }
+  // Copyright
   .copyright {
     color: $footer;
     margin-top: 10px;
@@ -91,6 +94,55 @@
           }
         }
       }
+    }
+  }
+  .footer .container-social-tablet {
+    display: none;
+  }
+  .footer .copyright {
+    font-size: $menu-mobile;
+  }
+}
+
+/* Schermi da 768px a 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .footer .footer-top {
+    .first {
+      .menu-footer {
+        li.social-footer {
+          display: none;
+        }
+      }
+    }
+    .second,
+    .third,
+    .fourth {
+      margin-top: 0px !important;
+    }
+    .first,
+    .second,
+    .third,
+    .fourth {
+      .menu-footer {
+        li {
+          margin-bottom: 10px;
+          a {
+            font-size: $menu-mobile;
+          }
+        }
+      }
+    }
+  }
+  .footer .container-social-tablet {
+    display: block;
+    text-align: center;
+    .icon-footer {
+      margin-right: 20px;
+      font-size: $footer-icon-tablet;
+      color: $primary-color;
+    }
+    .icon-footer:hover {
+      color: $third-color;
     }
   }
   .footer .copyright {

@@ -57,6 +57,27 @@
         </ul>
       </div>
     </div>
+    <div class="container-social-tablet">
+      <ul class="socia-tablet">
+        <li class="social-footer">
+          <a
+            href="https://www.facebook.com/verdepastelloadvsolutions/"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f icon-footer"></i>
+          </a>
+          <a href="https://www.instagram.com/verdepastello_to/" target="_blank">
+            <i class="fab fa-instagram icon-footer"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/verdepastello/ "
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in icon-footer"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="copyright">
       Made with big <i class="fas fa-heart icon-copyright"></i> by
       <a href="https://github.com/elepot87" target="_blank">Eleonora</a>
